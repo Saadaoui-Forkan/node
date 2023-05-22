@@ -1,5 +1,7 @@
 const express = require("express");
 
+const books = require("./data/books")
+
 // Init App
 const app = express();
 /*
@@ -12,7 +14,13 @@ const app = express();
 
 app.get("/", (req,res) => {
     res.send("Welcome Node Js")
+}) /*The client send a request to the server */
+
+app.get("/api/books", (req,res) => {
+    res.json(books)
 })
+
+
 
 // Running The Server
 const PORT = 5000;

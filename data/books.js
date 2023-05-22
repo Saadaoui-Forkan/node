@@ -24,3 +24,5 @@ const books = [
         cover: "cover_3"
     },
 ]
+
+module.exports = books
